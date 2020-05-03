@@ -1,0 +1,18 @@
+// Create a program that any number given, exponential growth will be shown. Input: 5, Output: 5^1, 5^2, ... , 5^10
+// Created Sep 18 2019
+public class FunctionGrowth {
+    public static void main(String[] args) {
+        int i = Integer.parseInt(args[0]);
+        int j = i;
+        int k = 1;
+        // print out the input
+        System.out.println(i);
+        // multiply the input by itself and repeat 9 times
+        while (k < 10) {
+            i = i*j;
+            System.out.println(i);
+            k++;
+        }
+    }
+
+}
