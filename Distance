@@ -1,0 +1,13 @@
+// Create a program so when two coordinates(x,y) it finds the distance from the origin
+// Created: Sep 19 2019
+public class Distance {
+    public static void main(String[] args) {
+        System.out.println(args[0]);
+        System.out.println(args[1]);
+
+        int i = Integer.parseInt(args[0]);
+        int j = Integer.parseInt(args[1]);
+
+        System.out.println("The distance between these coordinates and the orgin is " + Math.sqrt(i*i + j*j));
+    }
+}
