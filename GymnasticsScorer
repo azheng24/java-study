@@ -1,0 +1,24 @@
+//  A gymnast's score is determined by a panel of 6 judges who each decide a score between 0.0 and 10.0. 
+// The final score is determined by discarding the high and low scores, and averaging the remaining 4. 
+// Write a program GymnasticsScorer.java that takes 6 real command line inputs representing the 6 scores and prints their average, 
+// after throwing out the high and low scores.
+// Created Feb 26 2020
+public class GymnasticsScorer {
+
+    public static void main(String[] args) {
+        // create 6 variables
+        double a = Double.parseDouble(args[0]);
+        double b = Double.parseDouble(args[1]);
+        double c = Double.parseDouble(args[2]);
+        double d = Double.parseDouble(args[3]);
+        double e = Double.parseDouble(args[4]);
+        double f = Double.parseDouble(args[5]);
+        // Find the max and min
+        double max = Math.max(Math.max(Math.max(Math.max((Math.max(a, b)), c), d), e), f);
+        double min = Math.min(Math.min(Math.min(Math.min((Math.min(a, b)), c), d), e), f);
+        // subtract the min and max and divide by 4
+        System.out.println("Score:" + ((a+b+c+d+e+f) - max - min)/4);
+
+    }
+
+}
