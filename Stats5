@@ -1,0 +1,15 @@
+// Create a program to find 5 random numbers and find the greatest, least, and the average
+// Created Sep 11 2019
+public class Stats5 {
+    public static void main(String[] args) {
+        double a = Math.random();
+        double b = Math.random();
+        double c = Math.random();
+        double d = Math.random();
+        double e = Math.random();
+        double max = Math.max(Math.max(Math.max((Math.max(a, b)), c), d), e);
+        double min = Math.min(Math.min(Math.min((Math.min(a, b)), c), d), e);
+        System.out.println("The five numbers are: " + a + ", " + b + ", " + c + ", " + d + ", " + e + ". " + "The minimum of these numbers is " + min + ". " +
+        "The maximum of these numbers is " + max + ". " + "The average of these numbers are " + ((a+b+c+d+e)/5) + ".");
+    }
+}
