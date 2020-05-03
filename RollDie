@@ -1,0 +1,11 @@
+// Create a program that rolls a die and prints out the value
+// Created: Sep 18 2019
+public class RollDie {
+    public static void main(String[] args) {
+        int min = 1;
+        int max = 6;
+        // compute and print the die roll
+        double dieRoll = Math.floor((Math.random() * ((max - min) + 1)) + min);
+        System.out.println("The roll is " + dieRoll);
+    }
+}
