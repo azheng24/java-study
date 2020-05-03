@@ -1,0 +1,20 @@
+// Create a program that takes 3 integers and prints out 1 if they are all not equal,
+// prints out 2, if only one is equal to another, and prints out 3 if they are all equal
+// Created: Sep 18 2019
+public class NumberDistinctValues {
+    public static void main(String[] args) {
+        int i = Integer.parseInt(args[0]);
+        int j = Integer.parseInt(args[1]);
+        int k = Integer.parseInt(args[2]);
+        if (i != j && i != k && j != k) {
+        System.out.println("3");
+        } else if (i == j && i!=k || i != j && i == k || j == k && i != j) {
+        System.out.println("2");
+        } else if (i == j && j == k) {
+        System.out.println("1");
+        }
+
+
+    }
+
+}
