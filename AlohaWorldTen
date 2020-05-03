@@ -1,0 +1,13 @@
+public class AlohaWorldTen {
+
+    public static void main(String[] args) {
+        // Prints "Aloha, World" to the terminal window.
+        int i = 0;
+            while (i < 10) {
+                System.out.println("Aloha, World");
+                i++;
+            }
+
+    }
+
+}
