@@ -1,0 +1,25 @@
+// Create a program to report the BMI range of a person
+// Created: Apr 6 2019
+public class bmi {
+    public static void main(String[] args) {
+        // calculate the BMI
+        double weight = Double.parseDouble(args[0]);
+        double height = Double.parseDouble(args[1]);
+        double bmi = weight/((height)*(height));
+        // check their BMI for what range it is
+        if (bmi < 15)
+            System.out.println("starvation");
+        else if (bmi < 17.5)
+            System.out.println("anorexic");
+        else if (bmi < 18.5)
+            System.out.println("underweight");
+        else if (bmi < 25)
+            System.out.println("ideal");
+        else if (bmi < 30)
+            System.out.println("overweight");
+        else if (bmi < 40)
+            System.out.println("obese");
+        else if (bmi > 50)
+            System.out.println("morbidly obese");
+    }
+}
