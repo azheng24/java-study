@@ -1,0 +1,17 @@
+// Create a program to write all the numbers from 1000 to 2000, 5 per line
+// Created: Sep 17 2019
+public class FivePerLine {
+    public static void main(String[] args) {
+        // create a loop starting from 1000 and ending at 2000
+        for (int i = 1000; i <= 2000; i++) {
+            // if the current number is divisible by 5, print the number using a new line
+            if (i % 5 == 0) {
+                System.out.println(i + " ");
+            }
+            // else just print the number
+            else {
+            System.out.print(i + " ");
+            }
+        }
+    }
+}
