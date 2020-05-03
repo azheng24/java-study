@@ -1,0 +1,13 @@
+// Create a program that takes the month and the day and returns if that day is in spring
+// Created: Sep 11 2019
+public class SpringSeason {
+    public static void main(String[] args) {
+        int m = Integer.parseInt(args[0]);
+        int d = Integer.parseInt(args[1]);
+        if (((m > 3) && (m < 6)) || ((m == 3) && (d > 19)) || ((m == 6) && (d < 21))) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");
+        }
+    }
+}
