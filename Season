@@ -1,0 +1,20 @@
+// Create a program that tells the season given the month and the day
+// Created: Feb 28 2020
+public class Season {
+    public static void main(String[] args) {
+        // create a variable for the month and day
+        int month = Integer.parseInt(args[0]);
+        int day = Integer.parseInt(args[1]);
+        
+        // check the month and day for each season
+        if ((month == 3 && day >= 21) || (month == 6 && day <= 20) || month == 5 || month == 4) {
+            System.out.println("spring");
+        } else if ((month == 6 && day >= 21) || (month == 9 && day <= 22) || month == 7 || month == 8){
+            System.out.println("summer");
+        } else if ((month == 9 && day >= 23) || (month == 12 && day <= 21) || month == 10 || month == 11){
+            System.out.println("fall");
+        } else {
+            System.out.println("winter");
+        }
+    }
+}
