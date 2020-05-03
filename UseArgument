@@ -1,0 +1,8 @@
+// Create a program so that someone takes a person's name and writes: "Aloha, [name]"
+// Created: Sep 10 2019
+public class UseArgument {
+    public static void main(String[] args) {
+        System.out.print("Aloha, ");
+        System.out.print(args[0]);
+    }
+}
