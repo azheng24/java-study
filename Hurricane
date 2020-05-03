@@ -1,0 +1,18 @@
+// Create a program to rank the category of a hurricane
+// Created: Mar 1 2020
+public class Hurricane {
+    public static void main(String[] args) {
+        int windSpeed = Integer.parseInt(args[0]);
+        if (windSpeed >= 74 && windSpeed <= 95){
+            System.out.println("Category 1 Hurricane");
+        } else if (windSpeed >= 96 && windSpeed<= 110){
+            System.out.println("Category 2 Hurricane");
+        } else if (windSpeed >= 111 && windSpeed<= 130){
+            System.out.println("Category 3 Hurricane");
+        } else if (windSpeed >= 131 && windSpeed<= 155){
+            System.out.println("Category 4 Hurricane");
+        } else if (windSpeed > 155){
+            System.out.println("Category 5 Hurricane");
+        }
+    }
+}
