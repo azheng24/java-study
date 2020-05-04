@@ -1,0 +1,24 @@
+// Create a program to collect 5 command line inputs and puts the array in backwards
+// Created: Apr 12 2020
+public class printReverse {
+    public static void main(String[] args) {
+        int c = 0;
+        int [] array;
+        int size = args.length;
+       array = new int[size];
+        for (int k = 0; k < array.length; k++) {
+            array[k] = Integer.parseInt(args[k]);
+        }
+
+        int i = size - 1;
+        for (int k = 0; k < size/2; k++){
+            c = array[k];
+            array[k] = array[i];
+            array[i] = c;
+            i--;
+        }
+        for (int k = 0; k < array.length; k++ ) {
+            System.out.println(array[k]);
+        }
+    }
+}
