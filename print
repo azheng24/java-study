@@ -1,0 +1,13 @@
+// Create a program to print out 5 command line inputs and prints it out
+// Created: Apr 11 2020
+public class print {
+    public static void main(String[] args) {
+        int [] array;
+        array = new int[args.length];
+        for (int k = 0; k < array.length; k++) {
+            array[k] = Integer.parseInt(args[k]);
+            System.out.println(array[k]);
+        }
+    }
+}
+
