@@ -1,0 +1,96 @@
+// Create a program to replicate a tic tac toe game
+// For example:
+/* 1 2 3
+   4 5 6
+   7 8 9
+Input: 5 (move for player 1)
+Output:
+   1 2 3
+   4 x 6
+   7 8 9
+*/
+import java.util.Scanner;
+public class TicTacToe {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        // create all variables used
+        int num = 1;
+        int move = 0;
+        boolean win = false;
+        int moveNum = 1;
+        int i1 = 0;
+        int i2 = 0;
+        boolean number = false;
+        // use two dimensional array for the tic tac toe board
+        String[][] arr = new String[3][3];
+        // currentPlayer is 2 because it will switch to 1 at the beginning of the loop
+        int currentPlayer = 2;
+        // Array create
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                arr[i][j] = Integer.toString(num);
+                num++;
+            }
+        }
+
+        for (int j = 0; j < 9; j++) {
+            currentPlayer = 3 - currentPlayer;
+            //print the array
+            for (int k = 0; k < 3; k++) {
+                for (int l = 0; l < 3; l++) {
+                    System.out.print(arr[k][l] + " ");
+                }
+                System.out.println();
+            }
+
+            System.out.println("Player " + currentPlayer + " turn");
+            
+            // error system: make sure what they put is a number from 1 to 9
+            while (true) {
+                if (sc.hasNextInt() == false) {
+                    sc.next();
+                    System.out.println("Type a whole number from 1 to 9");
+                    continue;
+                }
+                move = sc.nextInt();
+                System.out.println("Move: "+ move);
+
+                if (move < 1 || move > 9) {
+                    System.out.println("ERROR: Your move must be between 1 and 9");
+                    continue;
+                }
+                // calculate the move to the corresponding array
+                i1 = Math.round((move-1)/3);
+                i2 = (move - 1) % 3;
+
+                if (arr[i1][i2] == "x" || arr[i1][i2] == "o") {
+                    System.out.println("ERROR: There is already a letter in that box");
+                    continue;
+                } else {
+                    break;
+                }
+            }
+
+            // code is to print x or o into the corresponding box
+            if (currentPlayer == 1) {
+                arr[i1][i2] = "x";
+            } else if (currentPlayer == 2) {
+                arr[i1][i2] = "o";
+            }
+
+            //All code is to check for winner
+            if ((arr[0][0] == arr[1][1] && arr[1][1] == arr[2][2]) || (arr[0][2] == arr[1][1] && arr[1][1] == arr[2][0]) ||
+            (arr[0][i2] == arr[1][i2] && arr[1][i2] == arr[2][i2]) || (arr[i1][0] == arr[i1][1] && arr[i1][1] == arr[i1][2])) {
+                win = true;
+                break;
+            }
+        }
+        // print winner or tie
+        if (win) {
+            System.out.println("Player " + currentPlayer + " wins");
+        } else {
+            System.out.println("Tie");
+        }
+    }
+}
+
