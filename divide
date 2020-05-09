@@ -1,0 +1,35 @@
+// Create a program to divide and two numbers together, no matter how long that number is
+// Ex: 100 digit number/4 digit number
+public class divide {
+    public static void main(String[] args) {
+        //initialize variables and arrays 
+        String num1 = args[0];
+        int num2 = Integer.parseInt(args[1]);
+        int[] arr1 = new int[num1.length()];
+        int a = 0;
+        // assign each digit into an array
+        for (int i = 0; i < arr1.length; i++) {
+            arr1[i] = num1.charAt(i) - '0';
+        }
+        //set the total array to 0
+        int total[] = new int[arr1.length];
+        for (int i = 0; i < total.length; i++) {
+            total[i] = 0;
+        }
+        // loop to divide the numbers
+        for (int j = 0; j < arr1.length; j++) {
+            if (num2 <= 0) {
+                System.out.println("Error print a number greater than zero");
+                break;
+            }
+            arr1[j] = a*10 + arr1[j];
+            total[j] += arr1[j]/num2;
+            a = arr1[j] % num2;
+        }
+        // print out the total array
+        for (int i = 0; i < total.length; i++) {
+            if (total[i] != 0 || total.length == 1)
+                System.out.print(total[i]);
+        }
+    }
+}
