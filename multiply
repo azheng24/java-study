@@ -1,5 +1,6 @@
 // Create a program to multiply and two numbers together, no matter how long that number is
 // Ex: 100 digit number times 100 digit number
+// Created: May 7 2020
 public class multiply {
 
     public static void main(String[] args) {
