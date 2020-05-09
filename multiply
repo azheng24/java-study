@@ -1,0 +1,44 @@
+// Create a program to multiply and two numbers together, no matter how long that number is
+// Ex: 100 digit number times 100 digit number
+public class multiply {
+
+    public static void main(String[] args) {
+        //initialize variables and arrays
+        String num1 = args[0];
+        String num2 = args[1];
+        int[] arr1 = new int[num1.length()];
+        int[] arr2 = new int[num2.length()];
+        int max1 = arr1.length-1;
+        int max2 = arr2.length-1;
+        int a = 0;
+        //put the numbers into an array
+        for (int i = 0; i < arr1.length; i++) {
+            arr1[i] = num1.charAt(max1) - '0';
+            max1--;
+        }
+        for (int i = 0; i < arr2.length; i++) {
+            arr2[i] = num2.charAt(max2) - '0';
+            max2--;
+        }
+        //set the total array to 0
+        int total[] = new int[num2.length()+num1.length()];
+        for (int i = 0; i < total.length; i++) {
+            total[i] = 0;
+        }
+        //loop to regroup and multiply
+        for(int i = 0; i < arr2.length; i++) {
+            a = 0;
+            for (int j = 0; j < arr1.length; j++) {
+                total[i+j] += arr1[j]*arr2[i]+a;
+                a = total[i+j]/10;
+                total[i+j] = total[i+j] % 10;
+                if (j == arr1.length-1)
+                    total[i+j+1] += a;
+            }
+        }
+        //print out the total
+        for (int i = total.length-1; i >= 0; i--) {
+            System.out.print(total[i]);
+        }
+    }
+}
