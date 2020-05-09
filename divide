@@ -1,5 +1,6 @@
 // Create a program to divide and two numbers together, no matter how long that number is
 // Ex: 100 digit number/4 digit number
+// Created: May 8 2020
 public class divide {
     public static void main(String[] args) {
         //initialize variables and arrays 
